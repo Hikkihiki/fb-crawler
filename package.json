@@ -10,6 +10,7 @@
     "url": "git://github.com/"
   },
   "dependencies": {
-    "fb": "^1.1.0"
+    "fb": "^1.1.0",
+    "step": "0.0.6"
   }
 }

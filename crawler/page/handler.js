@@ -1,6 +1,8 @@
 'use strict';
 
 var FB = require('fb');
+var token = "";
+FB.setAccessToken(token);
 
 module.exports.handler = function(event, context, callback) {
     FB.api('/medium', function(res) {

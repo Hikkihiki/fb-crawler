@@ -1,3 +1,5 @@
+.*
+
 # Logs
 logs
 *.log
@@ -41,3 +43,4 @@ admin.env
 
 #Ignore _meta folder
 _meta
+

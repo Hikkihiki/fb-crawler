@@ -1,14 +1,13 @@
 'use strict';
 
-module.exports.handler = function(event, context) {
-  console.log(event);
-  console.log(context);
-  console.log('hi');
-  var response = {
-   message: 'Your Serverless function ran successfully via the \''
-   + event.httpMethod
-   + '\' method!'
- };
+var FB = require('fb');
 
- return context.done(null, response);
+module.exports.handler = function(event, context, callback) {
+    FB.api('/medium', function(res) {
+        if (res && res.error) {
+            context.done(res.error, null);
+        } else {
+            context.done(null, res);
+        }
+    });
 };
